@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projeto Star Wars com Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .carousel img {
+      height: 400px;
+      object-fit: cover;
+      filter: brightness(0.4);
+    }
+
+    .card {
+      background-color: #1a1a1a;
+      color: white;
+      border: 1px solid gold;
+    }
+
+    .card img {
+      height: 650px;
+      object-fit: cover;
+    }
+
+    .card-title {
+      color: gold;
+    }
+
+    .card-text {
+      font-size: 0.95rem;
+    }
+
+    .modal-content {
+      background-color: #1a1a1a;
+      color: white;
+      border: 1px solid gold;
+    }
+
+    .modal-header {
+      border-bottom: 1px solid gold;
+    }
+
+    .btn-close {
+      background-color:gold;
+    }
+
+    .btn-gold {
+      background-color: gold;
+      color: #000000;
+      border: none;
+    }
+
+    .btn-gold:hover {
+      background-color: #e6c200;
+    }
+  </style>
+</head>
+<body>
+  <div id="carouselSW" class="carousel slide mb-5" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://i.pinimg.com/736x/11/e9/60/11e960876410d648e72da43a59969615.jpg" class="d-block w-100" alt="Darth Vader empunhando sabre de luz vermelho" />
+      </div>
+      <div class="carousel-item">
+        <img src="https://i.pinimg.com/736x/3f/98/f4/3f98f432c97df88ac03ccf4bf33fde64.jpg" class="d-block w-100" alt="Yoda com sabre de luz verde em pose de batalha" />
+      </div>
+      <div class="carousel-item">
+        <img src="https://i.pinimg.com/736x/84/f4/54/84f454a2e1ca58a984148191cdf2daad.jpg" class="d-block w-100" alt="Luke Skywalker contemplando o horizonte em Tatooine" />
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselSW" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselSW" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <div class="container">
+    <div class="row g-4 p-5">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100">
+          <img src="https://i.pinimg.com/736x/f5/8f/3b/f58f3b5b4b55694c9a055ba2fe773bd1.jpg" class="card-img-top" alt="Retrato de Darth Vader" />
+          <div class="card-body">
+            <h5 class="card-title">Darth Vader</h5>
+            <p class="card-text">Antes conhecido como Anakin Skywalker, Vader foi um Jedi poderoso que caiu no Lado Sombrio e se tornou um dos vilões mais temidos da galáxia.</p>
+            <button class="btn btn-gold" data-bs-toggle="modal" data-bs-target="#modalVader">Saiba mais</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100">
+          <img src="https://i.pinimg.com/736x/80/59/bc/8059bc9da19a118c79d426b2f07b346c.jpg" class="card-img-top" alt="Retrato do Mestre Yoda" />
+          <div class="card-body">
+            <h5 class="card-title">Mestre Yoda</h5>
+            <p class="card-text">Pequeno no tamanho, mas imenso na sabedoria. Yoda guiou gerações de Jedi e enfrentou os maiores desafios da Força com equilíbrio e paz.</p>
+            <button class="btn btn-gold" data-bs-toggle="modal" data-bs-target="#modalYoda">Saiba mais</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card h-100">
+          <img src="https://i.pinimg.com/736x/70/07/6f/70076f7dd43959aa4f9a5326bc2c9bb6.jpg" class="card-img-top" alt="Retrato de Luke Skywalker" />
+          <div class="card-body">
+            <h5 class="card-title">Luke Skywalker</h5>
+            <p class="card-text">De fazendeiro em Tatooine a herói da galáxia, Luke foi fundamental para a queda do Império e o renascimento da Ordem Jedi.</p>
+            <button class="btn btn-gold" data-bs-toggle="modal" data-bs-target="#modalLuke">Saiba mais</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalVader" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Darth Vader</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <p>Anakin Skywalker foi o Escolhido da profecia Jedi, mas sua paixão e medo o levaram ao Lado Sombrio. Como Darth Vader, serviu ao Imperador Palpatine e caçou os Jedi sobreviventes. Mesmo assim, sua redenção final veio ao salvar seu filho, Luke, destruindo o Imperador e cumprindo seu destino como o verdadeiro Escolhido.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalYoda" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Mestre Yoda</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <p>Com mais de 900 anos, Yoda foi o mestre mais experiente do Conselho Jedi. Sabedoria, poder e humildade o tornaram o maior símbolo da Ordem Jedi. Ele treinou gerações e, mesmo exilado após a queda da República, ainda teve papel crucial na formação de Luke Skywalker.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalLuke" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Luke Skywalker</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <p>Filho de Anakin e Padmé, Luke descobriu seu destino ao encontrar Obi-Wan Kenobi. Tornou-se um Jedi poderoso, enfrentou Vader e o Imperador, e foi responsável por reacender a esperança na galáxia. Sua jornada é marcada pela coragem, compaixão e fé na redenção.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
